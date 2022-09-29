@@ -1,6 +1,7 @@
 import os
 os.system("pip install vk_api")
 os.system("pip install colorama")
+os.system("pip install shutil")
 f_list = os.listdir()
 if not 'message.txt' in f_list:
     fil = open('./message.txt', "w+")

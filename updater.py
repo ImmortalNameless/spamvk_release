@@ -1,4 +1,5 @@
 import os
+import shutil
 
 print("Начинаю обновление...")
 
@@ -11,10 +12,7 @@ for file in files:
         try:
             os.remove("./"+file)
         except Exception:
-            files_in_dir = os.listdir("./"+file)
-            for i in files_in_dir:
-                os.remove("./"+file+"/"+i)
-            os.rmdir("./"+file)
+            shutil.rmtree("./"+file)
     else:
         os.system(f"cp {file} ..")
         saved.append(file)

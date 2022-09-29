@@ -21,8 +21,7 @@ os.chdir("..")
 os.rmdir("./spamvk_release")
 os.system("git clone https://github.com/None-TM/spamvk_release")
 for file in saved:
-    os.system(f"cp {file} ./spamvk_release")
-    os.remove("./"+file)
+    shutil.move("$HOME/"+file, "./")
 os.chdir("./spamvk_release")
 
 print("Обновление завершено")

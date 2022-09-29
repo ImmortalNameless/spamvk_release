@@ -8,7 +8,10 @@ saved = []
 
 for file in files:
     if file not in ignore:
-        os.remove("./"+file)
+        try:
+            os.remove("./"+file)
+        except Exception:
+            os.rmdir("./"+file)
     else:
         os.system(f"cp {file} ..")
         saved.append(file)

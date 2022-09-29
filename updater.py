@@ -17,7 +17,7 @@ for file in files:
         os.system(f"cp {file} ..")
         saved.append(file)
 
-os.system("cd")
+os.system("cd ..")
 os.rmdir("./spamvk_release")
 os.system("git clone https://github.com/None-TM/spamvk_release")
 for file in saved:
